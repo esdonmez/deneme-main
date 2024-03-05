@@ -1,4 +1,4 @@
-module pgo-collector
+module github.com/esdonmez/deneme-main
 
 go 1.20
 
