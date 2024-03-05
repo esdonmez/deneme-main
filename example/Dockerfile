@@ -6,7 +6,7 @@ RUN go get -u profile_downloader
 
 WORKDIR /app
 
-RUN profileDownloader
+RUN github.com/esdonmez/deneme-main
 
 COPY . .
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -pgo=merged.pprof -ldflags="-w -s" -o /app/buybox
