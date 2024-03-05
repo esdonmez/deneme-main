@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
+	pgo "github.com/esdonmez/deneme-main"
 	"log"
-	"pgo-collector"
 )
 
 func main() {

@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
+	pgo "github.com/esdonmez/deneme-main"
 	"os/exec"
-	pgo "pgo-collector"
 	"strings"
 )
 

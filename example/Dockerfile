@@ -2,11 +2,14 @@ FROM registry.trendyol.com/platform/base/image/golang:1.21.3-alpine as build
 ENV TZ=Europe/Istanbul
 WORKDIR /app
 
+COPY go.mod .
+COPY go.sum .
+RUN go mod download
 RUN go get -u github.com/esdonmez/deneme-main
 
 WORKDIR /app
 
-RUN profile_downloader
+RUN go build github.com/esdonmez/deneme-main/profile_downloader
 
 COPY . .
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -pgo=merged.pprof -ldflags="-w -s" -o /app/buybox
